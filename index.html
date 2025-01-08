@@ -4,426 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elektromat - Electrical Services</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: system-ui, -apple-system, sans-serif;
-        }
 
-        .container {
-            max-width: 1440px;
-            max-height: 4909px;
-            margin: 0 auto;
-            padding: 0 1rem;
-        }
-
-        /* Header */
-        .header {
-            background: white;
-            position: sticky;
-            margin-top: 32px;
-            top: 0;
-            z-index: 50;
-        }
-
-        .header .container {
-            display: flex;
-            justify-content: center;  /* Центрує елементи по горизонталі */
-            align-items: center;
-            height: 4rem;
-            width: 100%; /* Важливо, щоб контейнер займав всю ширину */
-        }
-        .header .container a {
-            margin-right: 80px; /* Збільшує відступ між логотипом і навігацією */
-        }
-        .nav {
-            display: flex;
-            gap: 1.5rem;
-            align-items: center;
-        }
-
-        .nav a {
-            text-decoration: none;
-            color: #333;
-            font-size: 18px;
-            font-weight: 500;
-        }
-        .nav1 {
-            display: flex;
-            gap: 5px;
-            align-items: center;
-        }
-
-        .nav1 a {
-            font-size: 18px;
-            text-decoration: none;
-            color: #333;
-            font-weight: 500;
-        }
-
-
-        .btn {
-            background: #FFB71D;
-            color: #000000;
-            padding: 0.5rem 1rem;
-            border-radius: 0.375rem;
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        /* Hero Section */
-        .hero {
-            padding: 4rem 0;
-        }
-
-        .hero-grid {
-            display: grid;
-            gap: 2rem;
-            grid-template-columns: 1fr;
-        }
-
-        @media (min-width: 1024px) {
-            .hero-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        .hero h1 {
-            font-size: 3rem;
-            font-weight: 700;
-            line-height: 1.1;
-            margin-bottom: 1rem;
-        }
-
-        .hero p {
-            color: #666;
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-        }
-
-        .hero-image {
-            height: 400px;
-            border-radius: 0.5rem;
-            overflow: hidden;
-        }
-
-        .hero-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Stats Section */
-        .stats {
-            background: #f9fafb;
-            padding: 4rem 0;
-        }
-
-        .stats-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .stats-header h2 {
-            color: #dc2626;
-            text-transform: uppercase;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .stats-header h3 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .stats-grid {
-            display: grid;
-            gap: 2rem;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        }
-
-        .stat-item {
-            text-align: center;
-        }
-
-        .stat-item h3 {
-            color: #dc2626;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-        }
-
-        .stat-item p {
-            color: #666;
-        }
-
-        /* About Section */
-        .about {
-            padding: 4rem 0;
-        }
-
-        .about-grid {
-            display: grid;
-            gap: 2rem;
-            grid-template-columns: 1fr;
-        }
-
-        @media (min-width: 1024px) {
-            .about-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-
-        .about h2 {
-            color: #dc2626;
-            text-transform: uppercase;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .about h3 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
-
-        .about p {
-            color: #666;
-            margin-bottom: 2rem;
-        }
-
-        .about-image {
-            height: 400px;
-            border-radius: 0.5rem;
-            overflow: hidden;
-        }
-
-        .about-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Services Section */
-        .services {
-            background: #f9fafb;
-            padding: 4rem 0;
-        }
-
-        .services-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .services-header h2 {
-            color: #dc2626;
-            text-transform: uppercase;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .services-grid {
-            display: grid;
-            gap: 2rem;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        }
-
-        .service-item {
-            background: white;
-            padding: 2rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        }
-
-        .service-item svg {
-            width: 3rem;
-            height: 3rem;
-            color: #dc2626;
-            margin-bottom: 1rem;
-        }
-
-        .service-item h4 {
-            font-size: 1.25rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .service-item p {
-            color: #666;
-        }
-
-        /* Work Section */
-        .work {
-            padding: 4rem 0;
-        }
-
-        .work-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .work-header h2 {
-            color: #dc2626;
-            text-transform: uppercase;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .work-grid {
-            display: grid;
-            gap: 2rem;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            margin-bottom: 2rem;
-        }
-
-        .work-item {
-            height: 300px;
-            border-radius: 0.5rem;
-            overflow: hidden;
-        }
-
-        .work-item img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Testimonials Section */
-        .testimonials {
-            background: #f9fafb;
-            padding: 4rem 0;
-        }
-
-        .testimonials-header {
-            text-align: center;
-            margin-bottom: 3rem;
-        }
-
-        .testimonials-header h2 {
-            color: #dc2626;
-            text-transform: uppercase;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
-
-        .testimonials-grid {
-            display: grid;
-            gap: 2rem;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        }
-
-        .testimonial-item {
-            background: white;
-            padding: 2rem;
-            border-radius: 0.5rem;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-        }
-
-        .testimonial-header {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            margin-bottom: 1rem;
-        }
-
-        .testimonial-header img {
-            width: 3rem;
-            height: 3rem;
-            border-radius: 50%;
-            object-fit: cover;
-        }
-
-        .stars {
-            color: #fbbf24;
-            display: flex;
-            gap: 0.25rem;
-            margin-bottom: 1rem;
-        }
-
-        /* Contact Section */
-        .contact {
-            background: #111827;
-            color: white;
-            padding: 4rem 0;
-        }
-
-        .contact-card {
-            background: white;
-            color: black;
-            max-width: 42rem;
-            margin: 0 auto;
-            padding: 2rem;
-            border-radius: 0.5rem;
-        }
-
-        .contact-header {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .contact-grid {
-            display: grid;
-            gap: 2rem;
-            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-        }
-
-        /* Footer */
-        .footer {
-            border-top: 1px solid #eee;
-            padding: 2rem 0;
-        }
-
-        .footer-content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
-        }
-
-        .footer-nav {
-            display: flex;
-            gap: 1.5rem;
-        }
-
-        .footer-nav a {
-            text-decoration: none;
-            color: #333;
-            font-size: 0.875rem;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .social-links a {
-            color: #666;
-        }
-
-        .footer-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .footer-links a {
-            color: #666;
-            text-decoration: none;
-            font-size: 0.875rem;
-        }
-
-        .copyright {
-            color: #666;
-            font-size: 0.875rem;
-        }
     </style>
 </head>
 <body>
 <header class="header">
-    <div class="container">
-        <a href="/">
+    <div class="container1">
+        <a href="/" class="logo">
             <img src="photo/Logo.jpg" alt="Elektromat" width="293">
         </a>
-        <nav class="nav1">
+        <nav class="nav">
             <a href="#">Expertise</a>
             <a href="#">About Us</a>
             <a href="#">Service</a>
@@ -440,12 +32,10 @@
             <div class="hero-grid">
                 <div>
                     <h1>Your trusted partner for all electrical services in Antwerpen!</h1>
-                    <p>Efficient, reliable, and innovative solutions for your high-tech business</p>
+                    <p>Efficient, reliable, and innovative solutions for your home or business.</p>
                     <a href="#" class="btn">Get a Free Quote</a>
                 </div>
-                <div class="hero-image">
-                    <img src="photo/photo1.jpg" alt="Electrician working" width="1340">
-                </div>
+
             </div>
         </div>
     </section>
@@ -453,30 +43,30 @@
     <section class="stats">
         <div class="container">
             <div class="stats-header">
-                <h2>Expertise you can trust</h2>
-                <h3>At Elektromat, we bring expertise and reliability to all your electrical needs</h3>
-                <p>Here's why our clients choose us</p>
+                <span class="overline">EXPERTISE YOU CAN TRUST</span>
+                <h2>At Elektromat, we bring expertise and reliability to all your electrical needs</h2>
+                <p>Here's why our clients choose us:</p>
             </div>
             <div class="stats-grid">
                 <div class="stat-item">
                     <h3>500K+</h3>
-                    <p>Successful Projects</p>
-                    <p>We've completed over 500k successful projects for our clients</p>
+                    <p class="title">Successful Projects</p>
+                    <p class="description">We've completed over 500 electrical projects with care and precision.</p>
                 </div>
                 <div class="stat-item">
                     <h3>99%</h3>
-                    <p>Customer Satisfaction</p>
-                    <p>Our dedication ensures optimal customer service and satisfaction</p>
+                    <p class="title">Customer Satisfaction</p>
+                    <p class="description">Our dedication ensures almost every client recommends our services.</p>
                 </div>
                 <div class="stat-item">
                     <h3>15+</h3>
-                    <p>Years of Experience</p>
-                    <p>We've been serving clients since 2008</p>
+                    <p class="title">Years of Experience</p>
+                    <p class="description">We've been serving homes and businesses with excellence for over a decade.</p>
                 </div>
                 <div class="stat-item">
                     <h3>24/7</h3>
-                    <p>Availability</p>
-                    <p>Emergency services available any time</p>
+                    <p class="title">Availability</p>
+                    <p class="description">Emergency? No problem. We're here for you anytime, any day.</p>
                 </div>
             </div>
         </div>
@@ -485,14 +75,14 @@
     <section class="about">
         <div class="container">
             <div class="about-grid">
-                <div>
+                <div class="about-content">
                     <h2>About Us</h2>
                     <h3>Elektromat</h3>
-                    <p>At Elektromat, we are committed to delivering top-quality electrical services. With over 15 years of experience and a focus on innovation, we provide tailored solutions for new installations, repairs, and maintenance. Located in Antwerp, we're just a call away for all your electrical needs.</p>
-                    <a href="#" class="btn">Get to Know Us</a>
+                    <p>At Elektromat, we are committed to delivering top-quality electrical services. With years of experience and a focus on innovation, we provide tailored solutions for new installations, repairs, and automation. Located in Antwerp, we're just a call away from helping you bring your electrical projects to life.</p>
+                    <a href="#" class="btn">Call Us Now →</a>
                 </div>
                 <div class="about-image">
-                    <img src="electrical-panel.jpg" alt="Electrical panel">
+                    <img src="photo/photo2.png" alt="Electrical panel maintenance">
                 </div>
             </div>
         </div>
@@ -501,34 +91,60 @@
     <section class="services">
         <div class="container">
             <div class="services-header">
-                <h2>Our Services</h2>
-                <h3>What We Offer</h3>
+                <span class="subtitle">OUR SERVICES</span>
+                <h2>What We Offer</h2>
             </div>
             <div class="services-grid">
                 <div class="service-item">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M22 12h-4l-3 9L9 3l-3 9H2"/>
-                    </svg>
-                    <h4>New Installations</h4>
-                    <p>We handle all types of new electrical installations, ensuring safety and efficiency</p>
+                    <div class="icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#FFA500" stroke-width="2"/>
+                            <path d="M2 17L12 22L22 17" stroke="#FFA500" stroke-width="2"/>
+                            <path d="M2 12L12 17L22 12" stroke="#FFA500" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>New Installations</h3>
+                    <p>We handle all types of new electrical installations, ensuring safety and efficiency.</p>
                 </div>
                 <div class="service-item">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
-                    </svg>
-                    <h4>Renovations and Repairs</h4>
-                    <p>From small fixes to major overhauls, our team is here to help</p>
+                    <div class="icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M21 14H3M21 14L17 10M21 14L17 18" stroke="#FFA500" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Renovations and Repairs</h3>
+                    <p>From small fixes to major overhauls, our team is here to help.</p>
                 </div>
                 <div class="service-item">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                        <path d="M14 2v6h6"/>
-                        <path d="M16 13H8"/>
-                        <path d="M16 17H8"/>
-                        <path d="M10 9H8"/>
-                    </svg>
-                    <h4>Inspection/Certification</h4>
-                    <p>We provide professional inspections to ensure your systems comply with regulations</p>
+                    <div class="icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#FFA500" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Inspection Coordination</h3>
+                    <p>We arrange professional inspections to ensure your systems comply with regulations.</p>
+                </div>
+                <div class="service-item">
+                    <div class="icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M20 12V22H4V12" stroke="#FFA500" stroke-width="2"/>
+                            <path d="M22 7H2V12H22V7Z" stroke="#FFA500" stroke-width="2"/>
+                            <path d="M12 22V7" stroke="#FFA500" stroke-width="2"/>
+                            <path d="M12 7H16.5C17.8807 7 19 5.88071 19 4.5V4.5C19 3.11929 17.8807 2 16.5 2H7.5C6.11929 2 5 3.11929 5 4.5V4.5C5 5.88071 6.11929 7 7.5 7H12Z" stroke="#FFA500" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Intercom Systems</h3>
+                    <p>Modern intercom installations to enhance your security.</p>
+                </div>
+                <div class="service-item">
+                    <div class="icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M12 15C13.6569 15 15 13.6569 15 12C15 10.3431 13.6569 9 12 9C10.3431 9 9 10.3431 9 12C9 13.6569 10.3431 15 12 15Z" stroke="#FFA500" stroke-width="2"/>
+                            <path d="M19.4 15C19.1277 15.6171 19.2583 16.3378 19.73 16.82L19.79 16.88C20.1656 17.2551 20.3766 17.7642 20.3766 18.295C20.3766 18.8258 20.1656 19.3349 19.79 19.71C19.4149 20.0856 18.9058 20.2966 18.375 20.2966C17.8442 20.2966 17.3351 20.0856 16.96 19.71L16.9 19.65C16.4178 19.1783 15.6971 19.0477 15.08 19.32C14.4755 19.5791 14.0826 20.1724 14.08 20.83V21C14.08 22.1046 13.1846 23 12.08 23C10.9754 23 10.08 22.1046 10.08 21V20.91C10.0642 20.2327 9.63587 19.6339 9 19.4C8.38291 19.1277 7.66219 19.2583 7.18 19.73L7.12 19.79C6.74485 20.1656 6.23582 20.3766 5.705 20.3766C5.17418 20.3766 4.66515 20.1656 4.29 19.79C3.91435 19.4149 3.70343 18.9058 3.70343 18.375C3.70343 17.8442 3.91435 17.3351 4.29 16.96L4.35 16.9C4.82167 16.4178 4.95231 15.6971 4.68 15.08C4.42093 14.4755 3.82764 14.0826 3.17 14.08H3C1.89543 14.08 1 13.1846 1 12.08C1 10.9754 1.89543 10.08 3 10.08H3.09C3.76733 10.0642 4.36613 9.63587 4.6 9C4.87231 8.38291 4.74167 7.66219 4.27 7.18L4.21 7.12C3.83435 6.74485 3.62343 6.23582 3.62343 5.705C3.62343 5.17418 3.83435 4.66515 4.21 4.29C4.58515 3.91435 5.09418 3.70343 5.625 3.70343C6.15582 3.70343 6.66485 3.91435 7.04 4.29L7.1 4.35C7.58219 4.82167 8.30291 4.95231 8.92 4.68H9C9.60447 4.42093 9.99738 3.82764 10 3.17V3C10 1.89543 10.8954 1 12 1C13.1046 1 14 1.89543 14 3V3.09C14.0026 3.74764 14.3955 4.34093 15 4.6C15.6171 4.87231 16.3378 4.74167 16.82 4.27L16.88 4.21C17.2551 3.83435 17.7642 3.62343 18.295 3.62343C18.8258 3.62343 19.3349 3.83435 19.71 4.21C20.0856 4.58515 20.2966 5.09418 20.2966 5.625C20.2966 6.15582 20.0856 6.66485 19.71 7.04L19.65 7.1C19.1783 7.58219 19.0477 8.30291 19.32 8.92V9C19.5791 9.60447 20.1724 9.99738 20.83 10H21C22.1046 10 23 10.8954 23 12C23 13.1046 22.1046 14 21 14H20.91C20.2524 14.0026 19.6591 14.3955 19.4 15Z" stroke="#FFA500" stroke-width="2"/>
+                        </svg>
+                    </div>
+                    <h3>Electrical Automation (Domotics)</h3>
+                    <p>Smart home solutions designed to fit your lifestyle perfectly.</p>
                 </div>
             </div>
         </div>
@@ -537,23 +153,45 @@
     <section class="work">
         <div class="container">
             <div class="work-header">
-                <h2>Our Projects</h2>
-                <h3>Our Work</h3>
-                <p>Discover some of the projects we've proudly completed for our satisfied clients, from residential to commercial spaces, we deliver high-quality results every time</p>
-            </div>
-            <div class="work-grid">
-                <div class="work-item">
-                    <img src="project1.jpg" alt="Project 1">
-                </div>
-                <div class="work-item">
-                    <img src="project2.jpg" alt="Project 2">
-                </div>
-                <div class="work-item">
-                    <img src="project3.jpg" alt="Project 3">
-                </div>
-            </div>
-            <div style="text-align: center;">
+                <h3>Our Projects</h3>
+                <h2>Our Work</h2>
+                <p>Discover some of the projects we've proudly completed for our satisfied clients. From residential to commercial spaces, we deliver top-quality results every time.</p>
                 <a href="#" class="btn">Get a Free Quote</a>
+            </div>
+
+            <div class="work-slider">
+                <div class="work-slider-container">
+                    <div class="work-slider-track">
+                        <div class="work-item">
+                            <img src="photo/works/photo-works1.jpg" alt="Project 1">
+                        </div>
+                        <div class="work-item">
+                            <img src="photo/works/photo-works2.jpg" alt="Project 2">
+                        </div>
+                        <div class="work-item">
+                            <img src="photo/works/photo-works3.jpg" alt="Project 3">
+                        </div>
+                        <div class="work-item">
+                            <img src="photo/works/photo-works1.jpg" alt="Project 4">
+                        </div>
+                        <div class="work-item">
+                            <img src="photo/works/photo-works2.jpg" alt="Project 5">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="work-slider-nav">
+                    <button class="slider-prev">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                        </svg>
+                    </button>
+                    <button class="slider-next">
+                        <svg width="24" height="24" viewBox="0 0 24 24">
+                            <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
+                        </svg>
+                    </button>
+                </div>
             </div>
         </div>
     </section>
@@ -561,73 +199,104 @@
     <section class="testimonials">
         <div class="container">
             <div class="testimonials-header">
-                <h2>Customer Reviews</h2>
-                <h3>What Our Clients Say</h3>
+                <div>
+                    <h2>Customer Reviews</h2>
+                    <h3>What Our Clients Say</h3>
+                </div>
+                <div class="navigation-buttons">
+                    <button class="nav-btn prev" aria-label="Previous testimonial">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    </button>
+                    <button class="nav-btn next" aria-label="Next testimonial">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </button>
+                </div>
             </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-item">
-                    <div class="testimonial-header">
-                        <img src="avatar1.jpg" alt="Client avatar">
-                        <div>
-                            <h4>Kevin Watson</h4>
-                            <p>Local Business</p>
+
+            <div class="testimonials-slider">
+                <div class="testimonials-track">
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">Fantastic service! Quick, reliable, and professional. They upgraded my entire electrical system seamlessly. Highly recommend!</p>
+                        <div class="testimonial-footer">
+                            <img src="avatar1.jpg" alt="Kristin Watson's avatar" class="avatar">
+                            <div class="author-info">
+                                <h4>Kristin Watson</h4>
+                                <p>Jun 27, 2020 · 6 min read</p>
+                            </div>
+                            <div class="rating">
+                                <div class="stars" data-rating="4.5"></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="stars">
-                        ★★★★★
-                    </div>
-                    <p>"Fantastic electrical work, reliable, very professional. They upgraded my entire building's electrical system efficiently. Highly recommended!"</p>
-                </div>
-                <div class="testimonial-item">
-                    <div class="testimonial-header">
-                        <img src="avatar2.jpg" alt="Client avatar">
-                        <div>
-                            <h4>Sarah Johnson</h4>
-                            <p>Homeowner</p>
+
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">They automated my entire home, and it works flawlessly. The team was knowledgeable and attentive to my needs.</p>
+                        <div class="testimonial-footer">
+                            <img src="avatar2.jpg" alt="Kristin Watson's avatar" class="avatar">
+                            <div class="author-info">
+                                <h4>Kristin Watson</h4>
+                                <p>Jun 27, 2020 · 6 min read</p>
+                            </div>
+                            <div class="rating">
+                                <div class="stars" data-rating="4.5"></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="stars">
-                        ★★★★★
-                    </div>
-                    <p>"Excellent service! The team was professional, punctual, and did a great job with our home's electrical upgrade. Would definitely recommend!"</p>
-                </div>
-                <div class="testimonial-item">
-                    <div class="testimonial-header">
-                        <img src="avatar3.jpg" alt="Client avatar">
-                        <div>
-                            <h4>Michael Brown</h4>
-                            <p>Office Manager</p>
+
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">They automated my entire home, and it works flawlessly. The team was knowledgeable and attentive to my needs.</p>
+                        <div class="testimonial-footer">
+                            <img src="avatar2.jpg" alt="Kristin Watson's avatar" class="avatar">
+                            <div class="author-info">
+                                <h4>Kristin Watson</h4>
+                                <p>Jun 27, 2020 · 6 min read</p>
+                            </div>
+                            <div class="rating">
+                                <div class="stars" data-rating="4.5"></div>
+                            </div>
                         </div>
                     </div>
-                    <div class="stars">
-                        ★★★★★
+
+                    <div class="testimonial-card">
+                        <p class="testimonial-text">Great experience! The repair service was excellent, and the technician explained everything clearly. Will definitely call them again.</p>
+                        <div class="testimonial-footer">
+                            <img src="avatar3.jpg" alt="Kristin Watson's avatar" class="avatar">
+                            <div class="author-info">
+                                <h4>Kristin Watson</h4>
+                                <p>Jun 27, 2020 · 6 min read</p>
+                            </div>
+                            <div class="rating">
+                                <div class="stars" data-rating="4.5"></div>
+                            </div>
+                        </div>
                     </div>
-                    <p>"Very reliable and professional service. They handled our office renovation project perfectly. Great attention to detail!"</p>
                 </div>
             </div>
         </div>
     </section>
 
     <section class="contact">
+        <div class="contact-background"></div>
         <div class="container">
             <div class="contact-card">
+                <span class="contact-label">CONTACT US</span>
                 <div class="contact-header">
                     <h2>Have questions or need a consultation?</h2>
                     <h3>Contact us today!</h3>
                 </div>
                 <div class="contact-grid">
-                    <div>
-                        <p><strong>Phone</strong></p>
-                        <p>+32 495 28 14 33</p>
-                        <p><strong>Email</strong></p>
-                        <p>info@elektro-mat.be</p>
+                    <div class="contact-info">
+                        <p class="phone">+32 491 28 14 33</p>
+                        <p class="email">info@elektro-mat.be</p>
                     </div>
-                    <div>
-                        <p><strong>Office</strong></p>
-                        <p>Sint-Bernardsesteenweg 608</p>
-                        <p>2660 Antwerpen</p>
-                        <p><strong>VAT Number</strong></p>
-                        <p>BE 0123456789</p>
+                    <div class="contact-info">
+                        <h4>Offices</h4>
+                        <p>Lange Leemstraat 433,</p>
+                        <p>2018 Antwerpen</p>
+                    </div>
+                    <div class="contact-info">
+                        <h4>VAT Number</h4>
+                        <p>BE0789.350.861</p>
                     </div>
                 </div>
             </div>
@@ -638,27 +307,30 @@
 <footer class="footer">
     <div class="container">
         <div class="footer-content">
-            <img src="elektromat-logo.svg" alt="Elektromat" width="140">
-            <nav class="footer-nav">
+            <img src="photo/footer/photo-footer.jpg" alt="Elektromat" class="footer-logo" width="200">
+            <div class="footer-nav">
                 <a href="#">Expertise</a>
                 <a href="#">About Us</a>
                 <a href="#">Service</a>
                 <a href="#">Projects</a>
                 <a href="#">Contact Us</a>
-            </nav>
+            </div>
+            <div class="footer-contact">
+                <a href="tel:+32491281433" class="phone">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                    </svg>
+                    +32 491 28 14 33
+                </a>
+                <a href="mailto:info@elektro-mat.be" class="email">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                    info@elektro-mat.be
+                </a>
+            </div>
             <div class="social-links">
-                <a href="#" aria-label="Facebook">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-                    </svg>
-                </a>
-                <a href="#" aria-label="Instagram">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
-                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-                    </svg>
-                </a>
                 <a href="#" aria-label="LinkedIn">
                     <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
                         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
@@ -666,15 +338,37 @@
                         <circle cx="4" cy="4" r="2"/>
                     </svg>
                 </a>
+                <a href="#" aria-label="Twitter">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+                    </svg>
+                </a>
+                <a href="#" aria-label="Facebook">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                    </svg>
+                </a>
+                <a href="#" aria-label="YouTube">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
+                        <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/>
+                    </svg>
+                </a>
             </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="copyright">© 2024 Electromat All rights reserved.</p>
             <div class="footer-links">
                 <a href="#">Terms</a>
                 <a href="#">Privacy</a>
                 <a href="#">Cookies</a>
             </div>
-            <p class="copyright">© 2024 Elektromat. All rights reserved.</p>
         </div>
     </div>
 </footer>
+
+
+<script src="js/work-slider.js"></script>
+<script src="js/comment-slider.js"></script>
 </body>
 </html>
