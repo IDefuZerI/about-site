@@ -13,8 +13,8 @@
 }
 
 .header {
+
     background: white;
-    position: sticky;
     top: 0;
     z-index: 50;
     width: 100%;
@@ -24,37 +24,41 @@
 
 .container1 {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-direction: column;
     max-width: 1340px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
 .logo {
-    display: block;
+    margin-bottom: 1rem;
+}
+
+.logo-img {
     height: 40px;
     width: auto;
 }
 
 .nav {
     display: flex;
-    align-items: center;
-    gap: 5rem; /* Reduced spacing between nav items to match design */
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
 }
 
 .nav a {
     text-decoration: none;
     color: #333;
-    font-size: 16px; /* Slightly smaller font size */
+    font-size: 16px;
     font-weight: 500;
     transition: color 0.3s ease;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #e5e7eb;
 }
 
 .nav a:hover {
     color: #ffb71d;
 }
-
 .btn {
     background: transparent; /* Changed to transparent */
     color: #333;
@@ -69,8 +73,6 @@
     background: #f8f9fa;
     border-color: #ddd;
 }
-
-/* Updated contact popup styles */
 .contact-popup {
     position: relative;
     display: inline-block;
@@ -95,6 +97,50 @@
 .contact-btn:hover {
     background-color: #f8f9fa;
     border-color: #ddd;
+}
+.get-free-btn {
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid #e5e7eb;
+    border-radius: 4px;
+    color: #333;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 1rem;
+}
+
+.get-free-btn:hover {
+    background-color: #f8f9fa;
+    border-color: #ddd;
+}
+
+@media (min-width: 769px) {
+    .container1 {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        margin-bottom: 0;
+    }
+
+    .nav {
+        flex-direction: row;
+        align-items: center;
+        width: auto;
+        gap: 2rem;
+    }
+
+    .nav a {
+        border-bottom: none;
+
+    }
+
+    .get-free-btn {
+        margin-top: 0;
+    }
 }
 
 /* Hero Section */
