@@ -12,16 +12,42 @@
 <body>
 <header class="header">
     <div class="container1">
-        <a href="/" class="logo">
+        <a href="#" class="logo">
             <img src="photo/Logo.jpg" alt="Elektromat" width="293">
         </a>
         <nav class="nav">
-            <a href="#">Expertise</a>
-            <a href="#">About Us</a>
-            <a href="#">Service</a>
-            <a href="#">Projects</a>
-            <a href="#">Contact Us</a>
-            <a href="#" class="btn">Get a Free</a>
+            <a href="#Expertise">Expertise</a>
+            <a href="#about">Over ons</a>
+            <a href="#Service">Dienst</a>
+            <a href="#Projects">Projecten</a>
+            <a href="#Contact">Contacten</a>
+            <div class="contact-popup">
+                <button class="contact-btn popup-trigger">Ontvang een gratis</button>
+                <div class="popup" id="contactPopup">
+                    <h3>Contact Us</h3>
+                    <div class="contact-item">
+                        <div class="contact-info">
+                            <i class="icon-mail"></i>
+                            <span>info@elektromat.com</span>
+                        </div>
+                        <a href="mailto:info@elektromat.com" class="action-btn">Schrijven</a>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-info">
+                            <i class="icon-phone"></i>
+                            <span>+32 123 456 789</span>
+                        </div>
+                        <a href="tel:+32123456789" class="action-btn">Telefoongesprek</a>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-info">
+                            <i class="icon-telegram"></i>
+                            <span>@elektromat</span>
+                        </div>
+                        <a href="https://t.me/elektromat" target="_blank" class="action-btn">Bericht</a>
+                    </div>
+                </div>
+            </div> 
         </nav>
     </div>
 </header>
@@ -31,55 +57,107 @@
         <div class="container">
             <div class="hero-grid">
                 <div>
-                    <h1>Your trusted partner for all electrical services in Antwerpen!</h1>
-                    <p>Efficient, reliable, and innovative solutions for your home or business.</p>
-                    <a href="#" class="btn">Get a Free Quote</a>
+                    <h1>Uw vertrouwde partner voor alle elektriciteitsdiensten in Antwerpen!</h1>
+                    <p>Efficiënte, betrouwbare en innovatieve oplossingen voor uw huis of bedrijf.</p>
+                    <div class="contact-popup">
+                        <a href="#" class="btn popup-trigger">Ontvang een gratis offerte</a>
+                        <div class="popup" id="heroContactPopup">
+                            <!-- Копіюємо вміст попапа з хедера -->
+                            <h3>Contact Us</h3>
+                            <div class="contact-item">
+                                <div class="contact-info">
+                                    <i class="icon-mail"></i>
+                                    <span>info@elektromat.com</span>
+                                </div>
+                                <a href="mailto:info@elektromat.com" class="action-btn">Schrijven</a>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-info">
+                                    <i class="icon-phone"></i>
+                                    <span>+32 123 456 789</span>
+                                </div>
+                                <a href="tel:+32123456789" class="action-btn">Telefoongesprek</a>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-info">
+                                    <i class="icon-telegram"></i>
+                                    <span>@elektromat</span>
+                                </div>
+                                <a href="https://t.me/elektromat" target="_blank" class="action-btn">Bericht</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <section class="stats">
+    <section class="stats" id="Expertise">
         <div class="container">
             <div class="stats-header">
-                <span class="overline">EXPERTISE YOU CAN TRUST</span>
-                <h2>At Elektromat, we bring expertise and reliability to all your electrical needs</h2>
-                <p>Here's why our clients choose us:</p>
+                <span class="overline">EXPERTISE WAAR U OP KUNT VERTROUWEN</span>
+                <h2>Bij Elektromat bieden wij expertise en betrouwbaarheid voor al uw elektrische behoeften</h2>
+                <p>Daarom kiezen onze klanten voor ons:</p>
             </div>
             <div class="stats-grid">
                 <div class="stat-item">
                     <h3>500K+</h3>
-                    <p class="title">Successful Projects</p>
-                    <p class="description">We've completed over 500 electrical projects with care and precision.</p>
+                    <p class="title">Succesvolle projecten</p>
+                    <p class="description">Wij hebben meer dan 500 elektrische projecten met zorg en precisie voltooid.</p>
                 </div>
                 <div class="stat-item">
                     <h3>99%</h3>
-                    <p class="title">Customer Satisfaction</p>
-                    <p class="description">Our dedication ensures almost every client recommends our services.</p>
+                    <p class="title">Klanttevredenheid</p>
+                    <p class="description">Dankzij onze toewijding beveelt bijna iedere klant onze diensten aan.</p>
                 </div>
                 <div class="stat-item">
                     <h3>15+</h3>
-                    <p class="title">Years of Experience</p>
-                    <p class="description">We've been serving homes and businesses with excellence for over a decade.</p>
+                    <p class="title">Jarenlange ervaring</p>
+                    <p class="description">Al meer dan tien jaar lang leveren wij uitstekende diensten aan particulieren en bedrijven.</p>
                 </div>
                 <div class="stat-item">
                     <h3>24/7</h3>
-                    <p class="title">Availability</p>
-                    <p class="description">Emergency? No problem. We're here for you anytime, any day.</p>
+                    <p class="title">Beschikbaarheid</p>
+                    <p class="description">Noodgeval? Geen probleem. Wij zijn er altijd voor u, elke dag.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="about">
+    <section class="about" id="about">
         <div class="container">
             <div class="about-grid">
                 <div class="about-content">
-                    <h2>About Us</h2>
+                    <h2>Over ons</h2>
                     <h3>Elektromat</h3>
-                    <p>At Elektromat, we are committed to delivering top-quality electrical services. With years of experience and a focus on innovation, we provide tailored solutions for new installations, repairs, and automation. Located in Antwerp, we're just a call away from helping you bring your electrical projects to life.</p>
-                    <a href="#" class="btn">Call Us Now →</a>
+                    <p>Bij Elektromat streven we ernaar om elektrische diensten van topkwaliteit te leveren. Met jarenlange ervaring en een focus op innovatie bieden we op maat gemaakte oplossingen voor nieuwe installaties, reparaties en automatisering. Gevestigd in Antwerpen, zijn we slechts een telefoontje verwijderd van het helpen van u om uw elektrische projecten tot leven te brengen.</p>
+                    <div class="contact-popup">
+                        <a href="#" class="btn popup-trigger">Bel ons nu →</a>
+                        <div class="popup" id="aboutContactPopup">
+                            <h3>Contact Us</h3>
+                            <div class="contact-item">
+                                <div class="contact-info">
+                                    <i class="icon-mail"></i>
+                                    <span>info@elektromat.com</span>
+                                </div>
+                                <a href="mailto:info@elektromat.com" class="action-btn">Schrijven</a>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-info">
+                                    <i class="icon-phone"></i>
+                                    <span>+32 123 456 789</span>
+                                </div>
+                                <a href="tel:+32123456789" class="action-btn">Telefoongesprek</a>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-info">
+                                    <i class="icon-telegram"></i>
+                                    <span>@elektromat</span>
+                                </div>
+                                <a href="https://t.me/elektromat" target="_blank" class="action-btn">Bericht</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="about-image">
                     <img src="photo/photo2.png" alt="Electrical panel maintenance">
@@ -88,11 +166,11 @@
         </div>
     </section>
 
-    <section class="services">
+    <section class="services" id="Service">
         <div class="container">
             <div class="services-header">
-                <span class="subtitle">OUR SERVICES</span>
-                <h2>What We Offer</h2>
+                <span class="subtitle">ONZE DIENSTEN</span>
+                <h2>Wat wij bieden</h2>
             </div>
             <div class="services-grid">
                 <div class="service-item">
@@ -103,8 +181,8 @@
                             <path d="M2 12L12 17L22 12" stroke="#FFA500" stroke-width="2"/>
                         </svg>
                     </div>
-                    <h3>New Installations</h3>
-                    <p>We handle all types of new electrical installations, ensuring safety and efficiency.</p>
+                    <h3>Nieuwe installaties</h3>
+                    <p>Wij verzorgen alle soorten nieuwe elektrische installaties en zorgen daarbij voor veiligheid en efficiëntie.</p>
                 </div>
                 <div class="service-item">
                     <div class="icon">
@@ -112,8 +190,8 @@
                             <path d="M21 14H3M21 14L17 10M21 14L17 18" stroke="#FFA500" stroke-width="2"/>
                         </svg>
                     </div>
-                    <h3>Renovations and Repairs</h3>
-                    <p>From small fixes to major overhauls, our team is here to help.</p>
+                    <h3>Renovaties en reparaties</h3>
+                    <p>Van kleine reparaties tot grote revisies: ons team staat voor u klaar.</p>
                 </div>
                 <div class="service-item">
                     <div class="icon">
@@ -121,8 +199,8 @@
                             <path d="M9 12L11 14L15 10M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z" stroke="#FFA500" stroke-width="2"/>
                         </svg>
                     </div>
-                    <h3>Inspection Coordination</h3>
-                    <p>We arrange professional inspections to ensure your systems comply with regulations.</p>
+                    <h3>Coördinatie van inspecties</h3>
+                    <p>Wij verzorgen professionele inspecties om ervoor te zorgen dat uw systemen voldoen aan de regelgeving.</p>
                 </div>
                 <div class="service-item">
                     <div class="icon">
@@ -133,8 +211,8 @@
                             <path d="M12 7H16.5C17.8807 7 19 5.88071 19 4.5V4.5C19 3.11929 17.8807 2 16.5 2H7.5C6.11929 2 5 3.11929 5 4.5V4.5C5 5.88071 6.11929 7 7.5 7H12Z" stroke="#FFA500" stroke-width="2"/>
                         </svg>
                     </div>
-                    <h3>Intercom Systems</h3>
-                    <p>Modern intercom installations to enhance your security.</p>
+                    <h3>Intercomsystemen</h3>
+                    <p>Moderne intercominstallaties ter verbetering van uw veiligheid.</p>
                 </div>
                 <div class="service-item">
                     <div class="icon">
@@ -143,20 +221,46 @@
                             <path d="M19.4 15C19.1277 15.6171 19.2583 16.3378 19.73 16.82L19.79 16.88C20.1656 17.2551 20.3766 17.7642 20.3766 18.295C20.3766 18.8258 20.1656 19.3349 19.79 19.71C19.4149 20.0856 18.9058 20.2966 18.375 20.2966C17.8442 20.2966 17.3351 20.0856 16.96 19.71L16.9 19.65C16.4178 19.1783 15.6971 19.0477 15.08 19.32C14.4755 19.5791 14.0826 20.1724 14.08 20.83V21C14.08 22.1046 13.1846 23 12.08 23C10.9754 23 10.08 22.1046 10.08 21V20.91C10.0642 20.2327 9.63587 19.6339 9 19.4C8.38291 19.1277 7.66219 19.2583 7.18 19.73L7.12 19.79C6.74485 20.1656 6.23582 20.3766 5.705 20.3766C5.17418 20.3766 4.66515 20.1656 4.29 19.79C3.91435 19.4149 3.70343 18.9058 3.70343 18.375C3.70343 17.8442 3.91435 17.3351 4.29 16.96L4.35 16.9C4.82167 16.4178 4.95231 15.6971 4.68 15.08C4.42093 14.4755 3.82764 14.0826 3.17 14.08H3C1.89543 14.08 1 13.1846 1 12.08C1 10.9754 1.89543 10.08 3 10.08H3.09C3.76733 10.0642 4.36613 9.63587 4.6 9C4.87231 8.38291 4.74167 7.66219 4.27 7.18L4.21 7.12C3.83435 6.74485 3.62343 6.23582 3.62343 5.705C3.62343 5.17418 3.83435 4.66515 4.21 4.29C4.58515 3.91435 5.09418 3.70343 5.625 3.70343C6.15582 3.70343 6.66485 3.91435 7.04 4.29L7.1 4.35C7.58219 4.82167 8.30291 4.95231 8.92 4.68H9C9.60447 4.42093 9.99738 3.82764 10 3.17V3C10 1.89543 10.8954 1 12 1C13.1046 1 14 1.89543 14 3V3.09C14.0026 3.74764 14.3955 4.34093 15 4.6C15.6171 4.87231 16.3378 4.74167 16.82 4.27L16.88 4.21C17.2551 3.83435 17.7642 3.62343 18.295 3.62343C18.8258 3.62343 19.3349 3.83435 19.71 4.21C20.0856 4.58515 20.2966 5.09418 20.2966 5.625C20.2966 6.15582 20.0856 6.66485 19.71 7.04L19.65 7.1C19.1783 7.58219 19.0477 8.30291 19.32 8.92V9C19.5791 9.60447 20.1724 9.99738 20.83 10H21C22.1046 10 23 10.8954 23 12C23 13.1046 22.1046 14 21 14H20.91C20.2524 14.0026 19.6591 14.3955 19.4 15Z" stroke="#FFA500" stroke-width="2"/>
                         </svg>
                     </div>
-                    <h3>Electrical Automation (Domotics)</h3>
-                    <p>Smart home solutions designed to fit your lifestyle perfectly.</p>
+                    <h3>Elektrische automatisering (Domotica)</h3>
+                    <p>Slimme oplossingen voor thuis die perfect bij uw levensstijl passen.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="work">
+    <section class="work" id="Projects">
         <div class="container">
             <div class="work-header">
-                <h3>Our Projects</h3>
-                <h2>Our Work</h2>
-                <p>Discover some of the projects we've proudly completed for our satisfied clients. From residential to commercial spaces, we deliver top-quality results every time.</p>
-                <a href="#" class="btn">Get a Free Quote</a>
+                <h3>Onze projecten</h3>
+                <h2>Ons werk</h2>
+                <p>Ontdek enkele projecten die we met trots hebben afgerond voor onze tevreden klanten. Van residentiële tot commerciële ruimtes, wij leveren telkens resultaten van topkwaliteit.</p>
+                <div class="contact-popup">
+                    <a href="#" class="btn popup-trigger">Ontvang een gratis offerte</a>
+                    <div class="popup" id="projectsContactPopup">
+                        <h3>Contact Us</h3>
+                        <div class="contact-item">
+                            <div class="contact-info">
+                                <i class="icon-mail"></i>
+                                <span>info@elektromat.com</span>
+                            </div>
+                            <a href="mailto:info@elektromat.com" class="action-btn">Schrijven</a>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-info">
+                                <i class="icon-phone"></i>
+                                <span>+32 123 456 789</span>
+                            </div>
+                            <a href="tel:+32123456789" class="action-btn">Telefoongesprek</a>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-info">
+                                <i class="icon-telegram"></i>
+                                <span>@elektromat</span>
+                            </div>
+                            <a href="https://t.me/elektromat" target="_blank" class="action-btn">Bericht</a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="work-slider">
@@ -181,17 +285,18 @@
                 </div>
 
                 <div class="work-slider-nav">
-                    <button class="slider-prev">
-                        <svg width="24" height="24" viewBox="0 0 24 24">
-                            <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
-                        </svg>
-                    </button>
-                    <button class="slider-next">
-                        <svg width="24" height="24" viewBox="0 0 24 24">
-                            <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
-                        </svg>
-                    </button>
-                </div>
+                    <div class="work-slider-nav">
+                        <button class="slider-prev">
+                            <svg  width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"/>
+                            </svg>
+                        </button>
+                        <button class="slider-next">
+                            <svg width="24" height="24" viewBox="0 0 24 24">
+                                <path d="M8.59 16.59L10 18l6-6-6-6-1.41 1.41L13.17 12z"/>
+                            </svg>
+                        </button>
+                    </div>
             </div>
         </div>
     </section>
@@ -200,8 +305,8 @@
         <div class="container">
             <div class="testimonials-header">
                 <div>
-                    <h2>Customer Reviews</h2>
-                    <h3>What Our Clients Say</h3>
+                    <h2>Klantrecensies</h2>
+                    <h3>Wat onze klanten zeggen</h3>
                 </div>
                 <div class="navigation-buttons">
                     <button class="nav-btn prev" aria-label="Previous testimonial">
@@ -216,12 +321,12 @@
             <div class="testimonials-slider">
                 <div class="testimonials-track">
                     <div class="testimonial-card">
-                        <p class="testimonial-text">Fantastic service! Quick, reliable, and professional. They upgraded my entire electrical system seamlessly. Highly recommend!</p>
+                        <p class="testimonial-text">Fantastische service! Snel, betrouwbaar en professioneel. Ze hebben mijn hele elektrische systeem naadloos geüpgraded. Een echte aanrader!</p>
                         <div class="testimonial-footer">
-                            <img src="avatar1.jpg" alt="Kristin Watson's avatar" class="avatar">
+                            <img src="photo/comments/photo-com1.jpg" alt="Kristin Watson's avatar" class="avatar">
                             <div class="author-info">
                                 <h4>Kristin Watson</h4>
-                                <p>Jun 27, 2020 · 6 min read</p>
+                                <p>27 juni 2020 · 6 min. lezen</p>
                             </div>
                             <div class="rating">
                                 <div class="stars" data-rating="4.5"></div>
@@ -230,12 +335,12 @@
                     </div>
 
                     <div class="testimonial-card">
-                        <p class="testimonial-text">They automated my entire home, and it works flawlessly. The team was knowledgeable and attentive to my needs.</p>
+                        <p class="testimonial-text">Ze hebben mijn hele huis geautomatiseerd en het werkt feilloos. Het team was deskundig en attent op mijn behoeften.</p>
                         <div class="testimonial-footer">
-                            <img src="avatar2.jpg" alt="Kristin Watson's avatar" class="avatar">
+                            <img src="photo/comments/photo-com2.png" alt="Kristin Watson's avatar" class="avatar">
                             <div class="author-info">
                                 <h4>Kristin Watson</h4>
-                                <p>Jun 27, 2020 · 6 min read</p>
+                                <p>27 juni 2020 · 6 min. lezen</p>
                             </div>
                             <div class="rating">
                                 <div class="stars" data-rating="4.5"></div>
@@ -244,12 +349,12 @@
                     </div>
 
                     <div class="testimonial-card">
-                        <p class="testimonial-text">They automated my entire home, and it works flawlessly. The team was knowledgeable and attentive to my needs.</p>
+                        <p class="testimonial-text">Ze hebben mijn hele huis geautomatiseerd en het werkt feilloos. Het team was deskundig en attent op mijn behoeften.</p>
                         <div class="testimonial-footer">
-                            <img src="avatar2.jpg" alt="Kristin Watson's avatar" class="avatar">
+                            <img src="photo/comments/photo-com3.png" alt="Kristin Watson's avatar" class="avatar">
                             <div class="author-info">
                                 <h4>Kristin Watson</h4>
-                                <p>Jun 27, 2020 · 6 min read</p>
+                                <p>27 juni 2020 · 6 min. lezen</p>
                             </div>
                             <div class="rating">
                                 <div class="stars" data-rating="4.5"></div>
@@ -258,12 +363,12 @@
                     </div>
 
                     <div class="testimonial-card">
-                        <p class="testimonial-text">Great experience! The repair service was excellent, and the technician explained everything clearly. Will definitely call them again.</p>
+                        <p class="testimonial-text">Geweldige ervaring! De reparatieservice was uitstekend en de technicus legde alles duidelijk uit. Zal ze zeker weer bellen.</p>
                         <div class="testimonial-footer">
-                            <img src="avatar3.jpg" alt="Kristin Watson's avatar" class="avatar">
+                            <img src="photo/comments/photo-com4.jpg" alt="Kristin Watson's avatar" class="avatar">
                             <div class="author-info">
                                 <h4>Kristin Watson</h4>
-                                <p>Jun 27, 2020 · 6 min read</p>
+                                <p>27 juni 2020 · 6 min. lezen</p>
                             </div>
                             <div class="rating">
                                 <div class="stars" data-rating="4.5"></div>
@@ -275,27 +380,26 @@
         </div>
     </section>
 
-    <section class="contact">
+    <section class="contact" id="Contact">
         <div class="contact-background"></div>
         <div class="container">
             <div class="contact-card">
-                <span class="contact-label">CONTACT US</span>
+                <span class="contact-label">Contacten</span>
                 <div class="contact-header">
-                    <h2>Have questions or need a consultation?</h2>
-                    <h3>Contact us today!</h3>
+                    <h2>Heeft u vragen of wilt u advies?</h2>
+                    <h3>Neem vandaag nog contact met ons op!</h3>
                 </div>
                 <div class="contact-grid">
-                    <div class="contact-info">
-                        <p class="phone">+32 491 28 14 33</p>
-                        <p class="email">info@elektro-mat.be</p>
+                    <div class="contact-info1">
+                        <div class="phone">+32 491 28 14 33</div>
+                        <div class="email">info@elektro-mat.be</div>
                     </div>
-                    <div class="contact-info">
-                        <h4>Offices</h4>
-                        <p>Lange Leemstraat 433,</p>
-                        <p>2018 Antwerpen</p>
+                    <div class="contact-section-info1">
+                        <h4>Kantoren</h4>
+                        <p>Lange Leemstraat 433,<br>2018 Antwerpen</p>
                     </div>
-                    <div class="contact-info">
-                        <h4>VAT Number</h4>
+                    <div class="contact-section-info1">
+                        <h4>VAT Nummer</h4>
                         <p>BE0789.350.861</p>
                     </div>
                 </div>
@@ -309,20 +413,20 @@
         <div class="footer-content">
             <img src="photo/footer/photo-footer.jpg" alt="Elektromat" class="footer-logo" width="200">
             <div class="footer-nav">
-                <a href="#">Expertise</a>
-                <a href="#">About Us</a>
-                <a href="#">Service</a>
-                <a href="#">Projects</a>
-                <a href="#">Contact Us</a>
+                <a href="#Expertise">Expertise</a>
+                <a href="#about">Over ons</a>
+                <a href="#Service">Dienst</a>
+                <a href="#Projects">Projecten</a>
+                <a href="#Contact">Contacten</a>
             </div>
             <div class="footer-contact">
-                <a href="tel:+32491281433" class="phone">
+                <a href="tel:+32491281433" class="phone1">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
                     </svg>
                     +32 491 28 14 33
                 </a>
-                <a href="mailto:info@elektro-mat.be" class="email">
+                <a href="mailto:info@elektro-mat.be" class="email1">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
                         <polyline points="22,6 12,13 2,6"/>
@@ -357,11 +461,11 @@
             </div>
         </div>
         <div class="footer-bottom">
-            <p class="copyright">© 2024 Electromat All rights reserved.</p>
+            <p class="copyright">© 2024 Electromat Alle rechten voorbehouden.</p>
             <div class="footer-links">
-                <a href="#">Terms</a>
+                <a href="#">Voorwaarden</a>
                 <a href="#">Privacy</a>
-                <a href="#">Cookies</a>
+                <a href="#">Koekjes</a>
             </div>
         </div>
     </div>
@@ -370,5 +474,6 @@
 
 <script src="js/work-slider.js"></script>
 <script src="js/comment-slider.js"></script>
+<script src="js/btHead.js"></script>
 </body>
 </html>
